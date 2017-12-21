@@ -23,7 +23,7 @@ html,body{
     width: 100%;
     height: 100%;
     background-image: url("../img/bg.png");
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     position: relative;
     overflow: hidden;
@@ -40,7 +40,7 @@ html,body{
     line-height: .88rem;
     text-align: center;
     position: absolute;
-    bottom: 1rem;
+    bottom: .5rem;
     left: 0;
     right:0;
     margin: auto;
@@ -178,15 +178,15 @@ html,body{
     height: 100%;
     position: absolute;
     top: 0;
-    left: -100%;
+    left: 0;
     background-image: url("../img/flyroom.png");
     background-size: cover;
     background-repeat: no-repeat;
-    animation: swip 1s linear 1 forwards,enlarger 1s linear 2s 1 forwards;
+   /* animation: swip 1s linear 1 forwards,enlarger 1s linear 2s 1 forwards;
     -webkit-animation: swip 1s linear 1 forwards,enlarger 1s linear 2s 1 forwards;
     -o-animation: swip 1s linear 1 forwards,enlarger 1s linear 2s 1 forwards;
     -moz-animation: swip 1s linear 1 forwards,enlarger 1s linear 2s 1 forwards;
-    -ms-animation: swip 1s linear 1 forwards,enlarger 1s linear 2s 1 forwards;
+    -ms-animation: swip 1s linear 1 forwards,enlarger 1s linear 2s 1 forwards;*/
     transform-style: preserve-3d;
     perspective: 2000px;
     transform-origin: bottom;
@@ -197,7 +197,7 @@ html,body{
     width: 3.85rem;
     height: 4.8rem;
     position: absolute;
-    bottom: 3.05rem;
+    top: 5.7rem;
     left: 0;
     right: 0;
     margin: auto;
@@ -208,6 +208,11 @@ html,body{
     transform-style: preserve-3d;
     perspective: 1000px;
     transform-origin:bottom;
+    -webkit-transform: scale(1.5,1.5);
+    -moz-transform: scale(1.5,1.5);
+    -ms-transform: scale(1.5,1.5);
+    -o-transform: scale(1.5,1.5);
+    transform: scale(1.5,1.5);
 }
 .op{
     opacity: 0;
