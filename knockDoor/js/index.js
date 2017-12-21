@@ -30,7 +30,8 @@ $(function () {
                 moveElem.css('top',eleTop+"px");
                 if(eleTop>=$(window).height()){
                     clearInterval(t);
-                    $("#js_sonw").remove(moveElem);
+                    // console.log(1)
+                    document.getElementById('js_sonw').removeChild(moveElem.get(0));
                 }
             },10);
         }
