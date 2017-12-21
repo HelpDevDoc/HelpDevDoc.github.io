@@ -9,8 +9,6 @@ $(function () {
         }
 
     }
-    $('window').on('resize',function () {
-        resize(designWidth)
-    })
-    resize(designWidth)
+    $(window).resize(resize(750))
+    resize(750)
 })
