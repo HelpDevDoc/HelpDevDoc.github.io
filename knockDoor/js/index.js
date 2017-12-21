@@ -26,9 +26,9 @@ $(function () {
             var eleTop=moveElem.position().top;
 
             var t=setInterval(function(){
-                eleTop++;
-                moveElem.css('top',eleTop+"px");
-                if(eleTop>=$(window).height()){
+                eleTop+=4;
+                moveElem.css('top',eleTop/100+"rem");
+                if(eleTop>=$(window).height()+400){
                     clearInterval(t);
                     // console.log(1)
                     document.getElementById('js_sonw').removeChild(moveElem.get(0));
@@ -37,7 +37,7 @@ $(function () {
         }
         var t=setInterval(function(){
             moveDown();
-        },100);
+        },80);
     })()
     /************/
 

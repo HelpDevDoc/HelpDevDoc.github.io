@@ -1,14 +1,13 @@
-$(function () {
-    const designWidth=750;
-    function resize(designWidth) {
-        let deviceWidth=$('html').width();
-        if(deviceWidth<750){
-            $('html').css('fontSize',`${deviceWidth/designWidth*100}px`)
-        }else{
-            $('html').css('fontSize','100px')
-        }
 
-    }
-    $(window).resize(resize(750))
-    resize(750)
-})
+!function(n){
+    var  e=n.document,
+        t=e.documentElement,
+        i=750,
+        d=i/100,
+        o="orientationchange"in n?"orientationchange":"resize",
+        a=function(){
+            var n=t.clientWidth||320;n>750&&(n=750);
+            t.style.fontSize=n/d+"px"
+        };
+    e.addEventListener&&(n.addEventListener(o,a,!1),e.addEventListener("DOMContentLoaded",a,!1))
+}(window);
