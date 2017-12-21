@@ -1,5 +1,5 @@
-/*$(function () {
-    /!*创建雪花*!/
+$(function () {
+    /*创建雪花*/
     (function(){
         function creatDiv(){
             var snowDiv=$("<div>");
@@ -26,7 +26,7 @@
             var eleTop=moveElem.position().top;
 
             var t=setInterval(function(){
-                eleTop+=4;
+                eleTop+=6;
                 moveElem.css('top',eleTop/100+"rem");
                 if(eleTop>=$(window).height()+400){
                     clearInterval(t);
@@ -39,11 +39,11 @@
             moveDown();
         },100);
     })()
-    /!************!/
+    /************/
 
 
-});*/
-$(function () {
+});
+/*$(function () {
     (function(exports, undefined){
         'use strict';
         var document = exports.document;
@@ -152,4 +152,4 @@ $(function () {
             }
         }
     })(window);
-})
+})*/
