@@ -14,8 +14,8 @@ input,button:focus{
     outline: none;
 }
 html,body{
-    width: 7.5rem;
-    height: 13.34rem;
+    width: 375px;
+    height: 667px;
     overflow: hidden;
 
 }
