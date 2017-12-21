@@ -1101,34 +1101,66 @@ html,body{
 }
 @-webkit-keyframes handle {
     0%{
-        left: 1.52rem;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -ms-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
     }
     100%{
-        left: 2rem;
+        -webkit-transform: translatex(.5rem);
+        -moz-transform: translatex(.5rem);
+        -ms-transform: translatex(.5rem);
+        -o-transform: translatex(.5rem);
+        transform: translatex(.5rem);
     }
 }
 @-moz-keyframes handle {
     0%{
-        left: 1.52rem;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -ms-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
     }
     100%{
-        left: 2rem;
+        -webkit-transform: translatex(.5rem);
+        -moz-transform: translatex(.5rem);
+        -ms-transform: translatex(.5rem);
+        -o-transform: translatex(.5rem);
+        transform: translatex(.5rem);
     }
 }
 @-o-keyframes handle {
     0%{
-        left: 1.52rem;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -ms-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
     }
     100%{
-        left: 2rem;
+        -webkit-transform: translatex(.5rem);
+        -moz-transform: translatex(.5rem);
+        -ms-transform: translatex(.5rem);
+        -o-transform: translatex(.5rem);
+        transform: translatex(.5rem);
     }
 }
 @-ms-keyframes handle {
     0%{
-        left: 1.52rem;
+        -webkit-transform: translatex(0);
+        -moz-transform: translatex(0);
+        -ms-transform: translatex(0);
+        -o-transform: translatex(0);
+        transform: translatex(0);
     }
     100%{
-        left: 2rem;
+        -webkit-transform: translatex(.5rem);
+        -moz-transform: translatex(.5rem);
+        -ms-transform: translatex(.5rem);
+        -o-transform: translatex(.5rem);
+        transform: translatex(.5rem);
     }
 }
 /*xbscale 熊宝放大缩小*/
