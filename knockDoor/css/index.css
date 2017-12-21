@@ -49,7 +49,7 @@ html,body{
     -moz-animation: scale .8s linear 1 both 1s ;
     -ms-animation:scale .8s linear 1 both 1s ;
 
-    z-index: 99;
+    z-index: 999;
 }
 #app .love{
     width: 100%;
@@ -65,6 +65,7 @@ html,body{
     position: absolute;
     top: 0;
     left: 0;
+    z-index: 99;
     overflow: hidden;
 }
 .snow_parent div{
@@ -185,19 +186,16 @@ html,body{
     -o-animation: swip .8s linear 1 forwards;
     -ms-animation: swip .8s linear 1 forwards;
     -moz-animation: swip .8s linear 1 forwards;
+    transform-style: preserve-3d;
+    perspective: 2000px;
 
 }
 .flyroom .room{
-    width: 11.45rem;
-    height: 14.83rem;
+    width: 3.85rem;
+    height: 4.8rem;
     position: absolute;
-    bottom: -2.08rem;
-    left: -2rem;
-    -webkit-transform: scale(0.3,0.3);
-    -moz-transform: scale(0.3,0.3);
-    -ms-transform: scale(0.3,0.3);
-    -o-transform: scale(0.3,0.3);
-    transform: scale(0.31,0.31);
+    bottom: 2.85rem;
+    left: 1.84rem;
     background-image: url("../img/room.png");
     background-size: cover;
     background-position: 0 0;
@@ -209,13 +207,14 @@ html,body{
     -moz-animation: enlarger 1s linear .8s 1 forwards;
     transform-style: preserve-3d;
     perspective: 1000px;
+    transform-origin:bottom;
 }
 .flyroom .room .door{
-    width: 2.24rem;
-    height: 4.74rem;
+    width: .72rem;
+    height: 1.5rem;
     position: absolute;
-    bottom: 0;
-    left: 4.405rem;
+    bottom: 0.2rem;
+    left: 1.5rem;
     background-image: url("../img/door.png");
     background-size: cover;
     background-position: 0 0;
@@ -223,66 +222,56 @@ html,body{
     -webkit-animation: door 1s ease-in-out 1 2s ,rotateDoor 1s ease-in-out 3s 1 forwards;
     -o-animation: door 1s ease-in-out 1 2s,rotateDoor 1s ease-in-out 3s 1 forwards;
     animation: door 1s ease-in-out 1 2s,rotateDoor 1s ease-in-out 3s 1 forwards;
-    -webkit-transform: scale(1,1) translateZ(0);
-    -moz-transform: scale(1,1) translateZ(0);
-    -ms-transform: scale(1,1) translateZ(0);
-    -o-transform: scale(1,1) translateZ(0);
-    transform: scale(1,1) translateZ(0);
     transform-style: preserve-3d;
-    transform-origin: left center;
+    transform-origin: left;
 }
 .flyroom .room .hand{
-    width: 6.4rem;
-    height: 2.64rem;
+    width: .6rem;
+    height: 0.22rem;
     background-image: url("../img/hand.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    bottom: 1rem;
-    left: 2.205rem;
+    bottom: .8rem;
+    left: 1.52rem;
     /*z-index: 99;*/
-    -webkit-transform: scale(0.33,0.4);
-    -moz-transform: scale(0.33,0.4);
-    -ms-transform: scale(0.33,0.4);
-    -o-transform: scale(0.33,0.4);
-    transform: scale(0.33,0.33);
     -webkit-animation: handle 1s ease-in-out 3s forwards;
     -o-animation: handle 1s ease-in-out 3s forwards;
     animation: handle 1s ease-in-out 3s forwards;
 
 }
 .flyroom .room .hand .xb{
-    width: 6.88rem;
-    height: 6.88rem;
+    width: .4rem;
+    height: 0.4rem;
     background-image: url("../img/xb.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
-    right: -2rem;
-    top: -2.6rem;
-    -webkit-transform: scale(0.3,0.3);
-    -moz-transform: scale(0.3,0.3);
-    -ms-transform: scale(0.3,0.3);
-    -o-transform: scale(0.3,0.3);
-    transform: scale(0.3,0.3);
-    -webkit-animation: xbscale 1s linear 4s;
-    -o-animation: xbscale 1s linear 4s;
-    animation: xbscale 1s linear 4s;
+    right: -0.15rem;
+    top: -0.15rem;
+    -webkit-transform: scale(0.5,0.5);
+    -moz-transform: scale(0.5,0.5);
+    -ms-transform: scale(0.5,0.5);
+    -o-transform: scale(0.5,0.5);
+    transform: scale(0.5,0.5);
+    transform-origin: center center;
+    -webkit-animation: xbscale 1s linear 4s forwards;
+    -o-animation: xbscale 1s linear 4s forwards;
+    animation: xbscale 1s linear 4s forwards;
 }
 .flyroom .room .door .knock{
-    width: 1.66rem;
-    height: 1.18rem;
+    width: 0.4rem;
+    height:0.4rem;
     background-image: url("../img/knock.png");
     background-size: cover;
     background-position: 0 0;
     background-repeat: no-repeat;
     position: absolute;
-    top:1.4rem;
-    left: 0;
+    top:0.4rem;
+    left: 0.05rem;
     right: 0;
-    margin: auto;
     -webkit-animation: knock 1s ease-in-out 1 2s forwards;
     -o-animation: knock 1s ease-in-out 1 2s forwards;
     animation: knock 1s ease-in-out 1 2s forwards;
@@ -605,92 +594,97 @@ html,body{
 /*enlarger房子放大动画*/
 @keyframes enlarger {
     0%{
-        -webkit-transform: scale(.3,.3);
-        -moz-transform: scale(.3,.3) ;
-        -ms-transform: scale(.3,.3) ;
-        -o-transform: scale(.3,.3) ;
-        transform: scale(.3,.3) ;
-        bottom: -2.08rem;
+        -webkit-transform: scale(1,1) ;
+        -moz-transform: scale(1,1) ;
+        -ms-transform: scale(1,1) ;
+        -o-transform: scale(1,1) ;
+        transform: scale(1,1)  ;
+        bottom: 2.85rem;
     }
     100%{
-        -webkit-transform: scale(1.1,1.1) ;
-        -moz-transform: scale(1.1,1.1) ;
-        -ms-transform: scale(1.1,1.1) ;
-        -o-transform: scale(1.1,1.1) ;
-        transform: scale(1.1,1.1)  ;
-        bottom: 3rem;
+        -webkit-transform: scale(3,3) ;
+        -moz-transform: scale(3,3) ;
+        -ms-transform: scale(3,3) ;
+        -o-transform: scale(3,3) ;
+        transform: scale(3,3)  ;
+        bottom: 2.45rem;
+
     }
 }
 @-webkit-keyframes enlarger {
     0%{
-        -webkit-transform: scale(.3,.3);
-        -moz-transform: scale(.3,.3) ;
-        -ms-transform: scale(.3,.3) ;
-        -o-transform: scale(.3,.3) ;
-        transform: scale(.3,.3) ;
-        bottom: -2.08rem;
+        -webkit-transform: scale(1,1) ;
+        -moz-transform: scale(1,1) ;
+        -ms-transform: scale(1,1) ;
+        -o-transform: scale(1,1) ;
+        transform: scale(1,1)  ;
+        bottom: 2.85rem;
     }
     100%{
-        -webkit-transform: scale(1.1,1.1) ;
-        -moz-transform: scale(1.1,1.1) ;
-        -ms-transform: scale(1.1,1.1) ;
-        -o-transform: scale(1.1,1.1) ;
-        transform: scale(1.1,1.1)  ;
-        bottom: 3.6rem;
+        -webkit-transform: scale(3,3) ;
+        -moz-transform: scale(3,3) ;
+        -ms-transform: scale(3,3) ;
+        -o-transform: scale(3,3) ;
+        transform: scale(3,3)  ;
+        bottom: 2.45rem;
+
     }
 }
 @-moz-keyframes enlarger {
     0%{
-        -webkit-transform: scale(.3,.3);
-        -moz-transform: scale(.3,.3) ;
-        -ms-transform: scale(.3,.3) ;
-        -o-transform: scale(.3,.3) ;
-        transform: scale(.3,.3) ;
-        bottom: -2.08rem;
+        -webkit-transform: scale(1,1) ;
+        -moz-transform: scale(1,1) ;
+        -ms-transform: scale(1,1) ;
+        -o-transform: scale(1,1) ;
+        transform: scale(1,1)  ;
+        bottom: 2.85rem;
     }
     100%{
-        -webkit-transform: scale(1.1,1.1) ;
-        -moz-transform: scale(1.1,1.1) ;
-        -ms-transform: scale(1.1,1.1) ;
-        -o-transform: scale(1.1,1.1) ;
-        transform: scale(1.1,1.1)  ;
-        bottom: 3.6rem;
+        -webkit-transform: scale(3,3) ;
+        -moz-transform: scale(3,3) ;
+        -ms-transform: scale(3,3) ;
+        -o-transform: scale(3,3) ;
+        transform: scale(3,3)  ;
+        bottom: 2.45rem;
+
     }
 }
 @-ms-keyframes enlarger {
     0%{
-        -webkit-transform: scale(.3,.3);
-        -moz-transform: scale(.3,.3) ;
-        -ms-transform: scale(.3,.3) ;
-        -o-transform: scale(.3,.3) ;
-        transform: scale(.3,.3) ;
-        bottom: -2.08rem;
+        -webkit-transform: scale(1,1) ;
+        -moz-transform: scale(1,1) ;
+        -ms-transform: scale(1,1) ;
+        -o-transform: scale(1,1) ;
+        transform: scale(1,1)  ;
+        bottom: 2.85rem;
     }
     100%{
-        -webkit-transform: scale(1.1,1.1) ;
-        -moz-transform: scale(1.1,1.1) ;
-        -ms-transform: scale(1.1,1.1) ;
-        -o-transform: scale(1.1,1.1) ;
-        transform: scale(1.1,1.1)  ;
-        bottom: 3.6rem;
+        -webkit-transform: scale(3,3) ;
+        -moz-transform: scale(3,3) ;
+        -ms-transform: scale(3,3) ;
+        -o-transform: scale(3,3) ;
+        transform: scale(3,3)  ;
+        bottom: 2.45rem;
+
     }
 }
 @-o-keyframes enlarger {
     0%{
-        -webkit-transform: scale(.3,.3);
-        -moz-transform: scale(.3,.3) ;
-        -ms-transform: scale(.3,.3) ;
-        -o-transform: scale(.3,.3) ;
-        transform: scale(.3,.3) ;
-        bottom: -2.08rem;
+        -webkit-transform: scale(1,1) ;
+        -moz-transform: scale(1,1) ;
+        -ms-transform: scale(1,1) ;
+        -o-transform: scale(1,1) ;
+        transform: scale(1,1)  ;
+        bottom: 2.85rem;
     }
     100%{
-        -webkit-transform: scale(1.1,1.1) ;
-        -moz-transform: scale(1.1,1.1) ;
-        -ms-transform: scale(1.1,1.1) ;
-        -o-transform: scale(1.1,1.1) ;
-        transform: scale(1.1,1.1)  ;
-        bottom: 3.6rem;
+        -webkit-transform: scale(3,3) ;
+        -moz-transform: scale(3,3) ;
+        -ms-transform: scale(3,3) ;
+        -o-transform: scale(3,3) ;
+        transform: scale(3,3)  ;
+        bottom: 2.45rem;
+
     }
 }
 /*door缩放动画*/
@@ -1025,11 +1019,11 @@ html,body{
         transform: rotateY(0);
     }
     100%{
-        -webkit-transform: rotateY(-45deg);
-        -moz-transform: rotateY(-45deg);
-        -ms-transform: rotateY(-45deg);
-        -o-transform: rotateY(-45deg);
-        transform: rotateY(-45deg);
+        -webkit-transform: rotateY(-30deg);
+        -moz-transform: rotateY(-30deg);
+        -ms-transform: rotateY(-30deg);
+        -o-transform: rotateY(-30deg);
+        transform: rotateY(-30deg);
     }
 }
 @-webkit-keyframes rotateDoor {
@@ -1041,11 +1035,11 @@ html,body{
         transform: rotateY(0);
     }
     100%{
-        -webkit-transform: rotateY(-45deg);
-        -moz-transform: rotateY(-45deg);
-        -ms-transform: rotateY(-45deg);
-        -o-transform: rotateY(-45deg);
-        transform: rotateY(-45deg);
+        -webkit-transform: rotateY(-30deg);
+        -moz-transform: rotateY(-30deg);
+        -ms-transform: rotateY(-30deg);
+        -o-transform: rotateY(-30deg);
+        transform: rotateY(-30deg);
     }
 }
 @-moz-keyframes rotateDoor {
@@ -1057,11 +1051,11 @@ html,body{
         transform: rotateY(0);
     }
     100%{
-        -webkit-transform: rotateY(-45deg);
-        -moz-transform: rotateY(-45deg);
-        -ms-transform: rotateY(-45deg);
-        -o-transform: rotateY(-45deg);
-        transform: rotateY(-45deg);
+        -webkit-transform: rotateY(-30deg);
+        -moz-transform: rotateY(-30deg);
+        -ms-transform: rotateY(-30deg);
+        -o-transform: rotateY(-30deg);
+        transform: rotateY(-30deg);
     }
 }
 @-ms-keyframes rotateDoor {
@@ -1073,11 +1067,11 @@ html,body{
         transform: rotateY(0);
     }
     100%{
-        -webkit-transform: rotateY(-45deg);
-        -moz-transform: rotateY(-45deg);
-        -ms-transform: rotateY(-45deg);
-        -o-transform: rotateY(-45deg);
-        transform: rotateY(-45deg);
+        -webkit-transform: rotateY(-30deg);
+        -moz-transform: rotateY(-30deg);
+        -ms-transform: rotateY(-30deg);
+        -o-transform: rotateY(-30deg);
+        transform: rotateY(-30deg);
     }
 }
 @-o-keyframes rotateDoor {
@@ -1089,273 +1083,273 @@ html,body{
         transform: rotateY(0);
     }
     100%{
-        -webkit-transform: rotateY(-45deg);
-        -moz-transform: rotateY(-45deg);
-        -ms-transform: rotateY(-45deg);
-        -o-transform: rotateY(-45deg);
-        transform: rotateY(-45deg);
+        -webkit-transform: rotateY(-30deg);
+        -moz-transform: rotateY(-30deg);
+        -ms-transform: rotateY(-30deg);
+        -o-transform: rotateY(-30deg);
+        transform: rotateY(-30deg);
     }
 }
 /*handle 熊手伸出动画*/
 @keyframes handle {
     0%{
-        left: 2.405rem;
+        left: 1.52rem;
     }
     100%{
-        left: 3.405rem;
+        left: 2rem;
     }
 }
 @-webkit-keyframes handle {
     0%{
-        left: 2.405rem;
+        left: 1.52rem;
     }
     100%{
-        left: 3.405rem;
+        left: 2rem;
     }
 }
 @-moz-keyframes handle {
     0%{
-        left: 2.405rem;
+        left: 1.52rem;
     }
     100%{
-        left: 3.405rem;
+        left: 2rem;
     }
 }
 @-o-keyframes handle {
     0%{
-        left: 2.405rem;
+        left: 1.52rem;
     }
     100%{
-        left: 3.405rem;
+        left: 2rem;
     }
 }
 @-ms-keyframes handle {
     0%{
-        left: 2.405rem;
+        left: 1.52rem;
     }
     100%{
-        left: 3.405rem;
+        left: 2rem;
     }
 }
 /*xbscale 熊宝放大缩小*/
 @keyframes xbscale {
     0%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
     20%{
-        -webkit-transform: scale(0.4,0.4) rotateZ(0deg);
-        -moz-transform: scale(0.4,0.4) rotateZ(0deg);
-        -ms-transform: scale(0.4,0.4) rotateZ(0deg);
-        -o-transform: scale(0.4,0.4) rotateZ(0deg);
-        transform: scale(0.4,0.4) rotateZ(0deg);
+        -webkit-transform: scale(.6,.6) rotateZ(0deg);
+        -moz-transform: scale(.6,.6) rotateZ(0deg);
+        -ms-transform: scale(.6,.6) rotateZ(0deg);
+        -o-transform: scale(.6,.6) rotateZ(0deg);
+        transform: scale(.6,.6) rotateZ(0deg);
     }
     40%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     60%{
-        -webkit-transform: scale(.4,.4) rotateZ(0);
-        -moz-transform: scale(.4,.4) rotateZ(0);
-        -ms-transform: scale(.4,.4) rotateZ(0);
-        -o-transform: scale(.4,.4) rotateZ(0);
-        transform: scale(.4,.4) rotateZ(0);
+        -webkit-transform: scale(.6,.6) rotateZ(0);
+        -moz-transform: scale(.6,.6) rotateZ(0);
+        -ms-transform: scale(.6,.6) rotateZ(0);
+        -o-transform: scale(.6,.6) rotateZ(0);
+        transform: scale(.6,.6) rotateZ(0);
     }
     80%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     100%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
 }
 @-webkit-keyframes xbscale {
     0%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
     20%{
-        -webkit-transform: scale(0.4,0.4) rotateZ(0deg);
-        -moz-transform: scale(0.4,0.4) rotateZ(0deg);
-        -ms-transform: scale(0.4,0.4) rotateZ(0deg);
-        -o-transform: scale(0.4,0.4) rotateZ(0deg);
-        transform: scale(0.4,0.4) rotateZ(0deg);
+        -webkit-transform: scale(.6,.6) rotateZ(0deg);
+        -moz-transform: scale(.6,.6) rotateZ(0deg);
+        -ms-transform: scale(.6,.6) rotateZ(0deg);
+        -o-transform: scale(.6,.6) rotateZ(0deg);
+        transform: scale(.6,.6) rotateZ(0deg);
     }
     40%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     60%{
-        -webkit-transform: scale(.4,.4) rotateZ(0);
-        -moz-transform: scale(.4,.4) rotateZ(0);
-        -ms-transform: scale(.4,.4) rotateZ(0);
-        -o-transform: scale(.4,.4) rotateZ(0);
-        transform: scale(.4,.4) rotateZ(0);
+        -webkit-transform: scale(.6,.6) rotateZ(0);
+        -moz-transform: scale(.6,.6) rotateZ(0);
+        -ms-transform: scale(.6,.6) rotateZ(0);
+        -o-transform: scale(.6,.6) rotateZ(0);
+        transform: scale(.6,.6) rotateZ(0);
     }
     80%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     100%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
 }
 @-moz-keyframes xbscale {
     0%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
     20%{
-        -webkit-transform: scale(0.4,0.4) rotateZ(0deg);
-        -moz-transform: scale(0.4,0.4) rotateZ(0deg);
-        -ms-transform: scale(0.4,0.4) rotateZ(0deg);
-        -o-transform: scale(0.4,0.4) rotateZ(0deg);
-        transform: scale(0.4,0.4) rotateZ(0deg);
+        -webkit-transform: scale(.6,.6) rotateZ(0deg);
+        -moz-transform: scale(.6,.6) rotateZ(0deg);
+        -ms-transform: scale(.6,.6) rotateZ(0deg);
+        -o-transform: scale(.6,.6) rotateZ(0deg);
+        transform: scale(.6,.6) rotateZ(0deg);
     }
     40%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     60%{
-        -webkit-transform: scale(.4,.4) rotateZ(0);
-        -moz-transform: scale(.4,.4) rotateZ(0);
-        -ms-transform: scale(.4,.4) rotateZ(0);
-        -o-transform: scale(.4,.4) rotateZ(0);
-        transform: scale(.4,.4) rotateZ(0);
+        -webkit-transform: scale(.6,.6) rotateZ(0);
+        -moz-transform: scale(.6,.6) rotateZ(0);
+        -ms-transform: scale(.6,.6) rotateZ(0);
+        -o-transform: scale(.6,.6) rotateZ(0);
+        transform: scale(.6,.6) rotateZ(0);
     }
     80%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     100%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
 }
 @-ms-keyframes xbscale {
     0%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
     20%{
-        -webkit-transform: scale(0.4,0.4) rotateZ(0deg);
-        -moz-transform: scale(0.4,0.4) rotateZ(0deg);
-        -ms-transform: scale(0.4,0.4) rotateZ(0deg);
-        -o-transform: scale(0.4,0.4) rotateZ(0deg);
-        transform: scale(0.4,0.4) rotateZ(0deg);
+        -webkit-transform: scale(.6,.6) rotateZ(0deg);
+        -moz-transform: scale(.6,.6) rotateZ(0deg);
+        -ms-transform: scale(.6,.6) rotateZ(0deg);
+        -o-transform: scale(.6,.6) rotateZ(0deg);
+        transform: scale(.6,.6) rotateZ(0deg);
     }
     40%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     60%{
-        -webkit-transform: scale(.4,.4) rotateZ(0);
-        -moz-transform: scale(.4,.4) rotateZ(0);
-        -ms-transform: scale(.4,.4) rotateZ(0);
-        -o-transform: scale(.4,.4) rotateZ(0);
-        transform: scale(.4,.4) rotateZ(0);
+        -webkit-transform: scale(.6,.6) rotateZ(0);
+        -moz-transform: scale(.6,.6) rotateZ(0);
+        -ms-transform: scale(.6,.6) rotateZ(0);
+        -o-transform: scale(.6,.6) rotateZ(0);
+        transform: scale(.6,.6) rotateZ(0);
     }
     80%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     100%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
 }
 @-o-keyframes xbscale {
     0%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
     20%{
-        -webkit-transform: scale(0.4,0.4) rotateZ(0deg);
-        -moz-transform: scale(0.4,0.4) rotateZ(0deg);
-        -ms-transform: scale(0.4,0.4) rotateZ(0deg);
-        -o-transform: scale(0.4,0.4) rotateZ(0deg);
-        transform: scale(0.4,0.4) rotateZ(0deg);
+        -webkit-transform: scale(.6,.6) rotateZ(0deg);
+        -moz-transform: scale(.6,.6) rotateZ(0deg);
+        -ms-transform: scale(.6,.6) rotateZ(0deg);
+        -o-transform: scale(.6,.6) rotateZ(0deg);
+        transform: scale(.6,.6) rotateZ(0deg);
     }
     40%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     60%{
-        -webkit-transform: scale(.4,.4) rotateZ(0);
-        -moz-transform: scale(.4,.4) rotateZ(0);
-        -ms-transform: scale(.4,.4) rotateZ(0);
-        -o-transform: scale(.4,.4) rotateZ(0);
-        transform: scale(.4,.4) rotateZ(0);
+        -webkit-transform: scale(.6,.6) rotateZ(0);
+        -moz-transform: scale(.6,.6) rotateZ(0);
+        -ms-transform: scale(.6,.6) rotateZ(0);
+        -o-transform: scale(.6,.6) rotateZ(0);
+        transform: scale(.6,.6) rotateZ(0);
     }
     80%{
-        -webkit-transform: scale(.4,.4) rotateZ(30deg);
-        -moz-transform: scale(.4,.4) rotateZ(30deg);
-        -ms-transform: scale(.4,.4) rotateZ(30deg);
-        -o-transform: scale(.4,.4) rotateZ(30deg);
-        transform: scale(.4,.4) rotateZ(30deg);
+        -webkit-transform: scale(.6,.6) rotateZ(30deg);
+        -moz-transform: scale(.6,.6) rotateZ(30deg);
+        -ms-transform: scale(.6,.6) rotateZ(30deg);
+        -o-transform: scale(.6,.6) rotateZ(30deg);
+        transform: scale(.6,.6) rotateZ(30deg);
     }
     100%{
-        -webkit-transform: scale(0.3,0.3) rotateZ(10deg);
-        -moz-transform: scale(0.3,0.3) rotateZ(10deg);
-        -ms-transform: scale(0.3,0.3) rotateZ(10deg);
-        -o-transform: scale(0.3,0.3) rotateZ(10deg);
-        transform: scale(0.3,0.3) rotateZ(10deg);
+        -webkit-transform: scale(.5,.5) rotateZ(10deg);
+        -moz-transform: scale(.5,.5) rotateZ(10deg);
+        -ms-transform: scale(.5,.5) rotateZ(10deg);
+        -o-transform: scale(.5,.5) rotateZ(10deg);
+        transform: scale(.5,.5) rotateZ(10deg);
     }
 }
 

@@ -12,24 +12,25 @@ $(function () {
             return snowDiv;
         }
         function getLeft(){
-            var eleParent=$("#js_sonw").get(0);
-            var style=window.getComputedStyle(eleParent);
-            var maxWidth=parseInt(style.width);
+            var eleParent=$("#js_sonw");
+            var maxWidth=parseInt(eleParent.width());
+            // console.log(maxWidth)
             var randomLeft=Math.floor(Math.random()*maxWidth)-100;
+            // console.log(randomLeft)
             return randomLeft;
         }
         // 让其向下移动
         function moveDown(){
-            var moveElem=creatDiv().get(0);
-            var eleStyle=window.getComputedStyle(moveElem);
-            var eleTop=parseInt(eleStyle.top);
+            var moveElem=creatDiv();
+
+            var eleTop=moveElem.position().top;
 
             var t=setInterval(function(){
                 eleTop++;
-                moveElem.style.top=eleTop+"px";
+                moveElem.css('top',eleTop+"px");
                 if(eleTop>=$(window).height()){
                     clearInterval(t);
-                    document.getElementById("js_sonw").removeChild(moveElem);
+                    $("#js_sonw").remove(moveElem);
                 }
             },10);
         }
