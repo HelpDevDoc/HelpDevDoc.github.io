@@ -236,9 +236,9 @@ html,body{
     bottom: .8rem;
     left: 1.52rem;
     /*z-index: 99;*/
-    -webkit-animation: handle 1s ease-in-out 3s forwards;
-    -o-animation: handle 1s ease-in-out 3s forwards;
-    animation: handle 1s ease-in-out 3s forwards;
+    -webkit-animation: handle 1s ease-in-out 3s normal forwards;
+    -o-animation: handle 1s ease-in-out 3s normal forwards;
+    animation: handle 1s ease-in-out 3s  normal forwards;
 
 }
 .flyroom .room .hand .xb{
