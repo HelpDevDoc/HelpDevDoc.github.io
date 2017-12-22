@@ -14,10 +14,10 @@ input,button:focus{
     outline: none;
 }
 html,body{
-    width: 375px;
-    height: 667px;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
-    padding-top: 44px;
+    padding-top: .88rem;
 
 }
 #app{
