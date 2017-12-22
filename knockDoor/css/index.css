@@ -17,6 +17,7 @@ html,body{
     width: 375px;
     height: 667px;
     overflow: hidden;
+    padding-top: 44px;
 
 }
 #app{
@@ -118,6 +119,7 @@ html,body{
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
 }
 #app .sloga div{
     width: 100%;
