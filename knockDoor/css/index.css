@@ -241,7 +241,7 @@ html{
     width: .6rem;
     height: 0.22rem;
     background-image: url("../img/hand.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
     position: absolute;
@@ -253,7 +253,6 @@ html{
     -moz-animation: handle 1s linear 5.5s 1 forwards;
     -ms-animation: handle 1s linear 5.5s 1  forwards;
     animation: handle 1s linear 5.5s 1 forwards;
-    transform-origin: right;
 }
 .room .hand .xb{
     width: .6rem;
@@ -1108,42 +1107,42 @@ html{
 /*handle 熊手伸出动画*/
 @keyframes handle {
     0%{
-        width: .6rem;
+        left: 1.52rem;
     }
     100%{
-        width: 1.15rem;
+        left:2.05rem;
     }
 }
 @-webkit-keyframes handle {
     0%{
-        width: .6rem;
+        left: 1.52rem;
     }
     100%{
-        width: 1.08rem;
+        left:2.05rem;
     }
 }
 @-moz-keyframes handle {
     0%{
-        width: .6rem;
+        left: 1.52rem;
     }
     100%{
-        width: 1.08rem;
+        left:2.05rem;
     }
 }
 @-o-keyframes handle {
     0%{
-        width: .6rem;
+        left: 1.52rem;
     }
     100%{
-        width: 1.08rem;
+        left:2.05rem;
     }
 }
 @-ms-keyframes handle {
     0%{
-        width: .6rem;
+        left: 1.52rem;
     }
     100%{
-        width: 1.08rem;
+        left:2.05rem;
     }
 }
 /*xbscale 熊宝放大缩小*/
