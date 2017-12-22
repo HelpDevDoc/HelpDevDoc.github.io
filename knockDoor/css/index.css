@@ -248,11 +248,11 @@ html{
     bottom: .8rem;
     left: 1.52rem;
     /*z-index: 99;*/
-    -webkit-animation: handle 1s linear 5.5s 1 forwards;
-    -o-animation: handle 1s linear 5.5s 1 forwards;
-    -moz-animation: handle 1s linear 5.5s 1 forwards;
-    -ms-animation: handle 1s linear 5.5s 1  forwards;
-    animation: handle 1s linear 5.5s 1 forwards;
+    -webkit-animation: handle 1s linear 5.5s 1 both;
+    -o-animation: handle 1s linear 5.5s 1 both;
+    -moz-animation: handle 1s linear 5.5s 1 both;
+    -ms-animation: handle 1s linear 5.5s 1  both;
+    animation: handle 1s linear 5.5s 1 both;
 }
 .room .hand .xb{
     width: .6rem;
