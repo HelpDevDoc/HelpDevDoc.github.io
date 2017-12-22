@@ -1155,6 +1155,7 @@ html{
         -ms-transform: scale(.5,.5) rotateZ(10deg);
         -o-transform: scale(.5,.5) rotateZ(10deg);
         transform: scale(.5,.5) rotateZ(10deg);
+        right: -.2rem;
     }
     20%{
         -webkit-transform: scale(.6,.6) rotateZ(0deg);
@@ -1190,6 +1191,7 @@ html{
         -ms-transform: scale(.5,.5) rotateZ(10deg);
         -o-transform: scale(.5,.5) rotateZ(10deg);
         transform: scale(.5,.5) rotateZ(10deg);
+        right: -.2rem;
     }
 }
 @-webkit-keyframes xbscale {
