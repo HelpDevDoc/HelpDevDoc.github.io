@@ -253,8 +253,7 @@ html{
     -moz-animation: handle 1s linear 5.5s 1 forwards;
     -ms-animation: handle 1s linear 5.5s 1  forwards;
     animation: handle 1s linear 5.5s 1 forwards;
-    transform-origin: left;
-
+    
 }
 .room .hand .xb{
     width: .6rem;
