@@ -14,8 +14,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="605">
-              <caret line="41" column="17" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="41" selection-end-column="17" />
+            <state relative-caret-position="692">
+              <caret line="41" column="14" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="41" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -117,7 +117,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="261" />
     <option name="y" value="25" />
     <option name="width" value="1400" />
@@ -202,15 +202,15 @@
       <workItem from="1513818372670" duration="678000" />
       <workItem from="1513819558640" duration="8741000" />
       <workItem from="1513839851458" duration="13116000" />
-      <workItem from="1513904554675" duration="599000" />
+      <workItem from="1513904554675" duration="727000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="41131000" />
+    <option name="totallyTimeSpent" value="41259000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13326226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -568,8 +568,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="605">
-          <caret line="41" column="17" lean-forward="true" selection-start-line="32" selection-start-column="6" selection-end-line="41" selection-end-column="17" />
+        <state relative-caret-position="692">
+          <caret line="41" column="14" lean-forward="false" selection-start-line="32" selection-start-column="5" selection-end-line="41" selection-end-column="14" />
           <folding />
         </state>
       </provider>
